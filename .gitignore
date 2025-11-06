@@ -1,0 +1,143 @@
+# ============================================
+# .gitignore para Chatbot PYME con RAG
+# ============================================
+
+# ----------------
+# SECRETOS Y CONFIGURACIÓN SENSIBLE
+# ----------------
+# CRÍTICO: Nunca subir API keys, tokens, o credenciales
+.env
+.env.local
+.env.production
+*.key
+*.pem
+credentials.json
+
+# ----------------
+# BASES DE DATOS Y ALMACENAMIENTO LOCAL
+# ----------------
+# ChromaDB genera archivos binarios pesados (embeddings)
+# Estos se recrean localmente con el script create_embeddings.py
+chroma_db/
+*.db
+*.sqlite
+*.sqlite3
+
+# SQLite journals (archivos temporales de la DB)
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ----------------
+# ARCHIVOS DE VERSIONADO DE DOCUMENTOS
+# ----------------
+# Los documentos versionados pueden pesar mucho
+# En producción, estos irían en S3, no en Git
+knowledge_base_versions/documents/*
+knowledge_base_versions/metadata/*
+
+# Pero sí versionamos la estructura (carpetas vacías)
+!knowledge_base_versions/documents/.gitkeep
+!knowledge_base_versions/metadata/.gitkeep
+
+# ----------------
+# LOGS Y ARCHIVOS TEMPORALES
+# ----------------
+logs/*.log
+logs/*.txt
+*.log
+
+# Archivos temporales de Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+
+# ----------------
+# ENTORNOS VIRTUALES DE PYTHON
+# ----------------
+# Si usas venv, no debe subirse (ocupa cientos de MB)
+venv/
+env/
+ENV/
+.venv
+
+# ----------------
+# CACHE Y COMPILADOS
+# ----------------
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+*.mo
+*.pot
+
+# ----------------
+# IDEs Y EDITORES
+# ----------------
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ----------------
+# SISTEMA OPERATIVO
+# ----------------
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# ----------------
+# TESTING Y DESARROLLO
+# ----------------
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+
+# Coverage reports
+.coverage
+coverage.xml
+htmlcov/
+
+# ----------------
+# BUILD Y DISTRIBUCIÓN
+# ----------------
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ----------------
+# ARCHIVOS DE NGROK (Semana 5)
+# ----------------
+# Ngrok genera archivos de configuración temporal
+ngrok.yml
+ngrok.log
+
+# ----------------
+# NOTAS PERSONALES Y TEMPORALES
+# ----------------
+# Útil para tus notas durante desarrollo
+TODO.md
+NOTAS.md
+scratch/
+temp/
+tmp/

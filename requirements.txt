@@ -1,0 +1,47 @@
+# ============================================
+# REQUIREMENTS - SEMANA 3: RAG MANUAL
+# ============================================
+# Versiones basadas en ambiente actual del desarrollador
+# Solo dependencias necesarias para esta etapa
+
+# ----------------
+# CORE DEPENDENCIES
+# ----------------
+
+# OpenAI API - Chat completions y embeddings
+# Usamos gpt-4o-mini y text-embedding-3-small
+openai==2.3.0
+
+# FastAPI - Framework web (lo usaremos más en Semana 5)
+fastapi==0.118.0
+uvicorn==0.37.0          # Servidor ASGI para FastAPI
+pydantic==2.11.10        # Validación de datos
+
+# ----------------
+# RAG & VECTOR DATABASE
+# ----------------
+
+# ChromaDB - Base de datos vectorial local
+# Almacena embeddings y hace similarity search
+chromadb==1.2.1
+
+# NumPy - Requerido por ChromaDB para operaciones vectoriales
+numpy==2.3.4
+
+# ----------------
+# UTILITIES
+# ----------------
+
+# Python-dotenv - Cargar variables de entorno desde .env
+python-dotenv==1.1.1
+
+# Requests - HTTP client (útil para debugging)
+requests==2.32.5
+
+# ----------------
+# NOTAS:
+# ----------------
+# LangChain se agregará en SEMANA 4
+# Twilio se agregará en SEMANA 5
+# Pytest se agregará en SEMANA 7
+# Frontend dependencies (Jinja2) en SEMANA 8
