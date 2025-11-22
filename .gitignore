@@ -125,7 +125,7 @@ dist/
 *.egg-info/
 *.egg
 
-# ----------------
+# ----------------  
 # ARCHIVOS DE NGROK (Semana 5)
 # ----------------
 # Ngrok genera archivos de configuración temporal

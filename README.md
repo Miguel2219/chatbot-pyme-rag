@@ -90,7 +90,7 @@ cd chatbot-pyme-rag
 ### 2. Crear entorno virtual (recomendado)
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate 
 ```
 
 ### 3. Instalar dependencias
@@ -128,11 +128,6 @@ OPENAI_API_KEY=tu_api_key_aqui
 - [ ] Webhooks con FastAPI
 - [ ] Historial de conversaciones
 
-### Semanas 6-12
-- Ver roadmap completo en documentación
-
----
-
 ## Objetivos de Aprendizaje
 
 Este proyecto está diseñado para aprender:
@@ -148,17 +143,9 @@ Este proyecto está diseñado para aprender:
 
 ## Autor
 
-**Tu Nombre**
-- Tecnólogo en Análisis y Desarrollo de Software - SENA
-- LinkedIn: [miguel-paba-48580b339]
-- GitHub: [Miguel2219]
+**Miguel Paba**
+- Tecnólogo en Análisis y Desarrollo de Software
+- LinkedIn: [https://www.linkedin.com/in/miguel-paba-48580b339/]
+- GitHub: [https://github.com/Miguel2219]
 
 ---
-
-## Licencia
-
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
-
----
-
-**Nota:** Este proyecto está en desarrollo activo. Se actualiza semanalmente durante 12 semanas
