@@ -2,7 +2,7 @@ from openai import OpenAI
 from typing import List
 import time
 
-from config import (
+from backend.config import (
     OPENAI_API_KEY,
     EMBEDDING_MODEL,
     COST_PER_1K_TOKENS_CHAT

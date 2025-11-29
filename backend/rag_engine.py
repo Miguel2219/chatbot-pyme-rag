@@ -1,8 +1,8 @@
 from openai import OpenAI
 from typing import List, Dict, Optional
 import time
-from vector_store_manager import VectorStoreManager
-from config import (
+from backend.vector_store_manager import VectorStoreManager
+from backend.config import (
     OPENAI_API_KEY,
     CHAT_MODEL,
     TEMPETURE,

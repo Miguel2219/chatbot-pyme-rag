@@ -2,8 +2,8 @@ import chromadb
 from chromadb.config import Settings
 from typing import List, Dict, Optional
 import time
-from embeddings_manual import get_embeddings_batch
-from config import (
+from backend.embeddings_manual import get_embeddings_batch
+from backend.config import (
     CHROMA_PERSIST_DIRECTORY,
     CHROMA_COLLECTION_NAME
 )
@@ -98,7 +98,7 @@ class VectorStoreManager:
         start_time = time.time()
         
         try:
-            from embeddings_manual import get_embedding
+            from backend.embeddings_manual import get_embedding
             query_embedding = get_embedding(query)
             results = self.collection.query(
                 query_embeddings=[query_embedding],

@@ -1,6 +1,6 @@
 import os
 from typing import List, Dict
-from config import KNOWLEDGE_BASE_PATH
+from backend.config import KNOWLEDGE_BASE_PATH
 
 def load_single_document(file_path: str) -> str:
     if not os.path.exists(file_path):
