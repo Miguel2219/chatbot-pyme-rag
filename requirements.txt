@@ -1,19 +1,62 @@
-# OpenAI API - Chat completions y embeddings
-# Usamos gpt-4o-mini y text-embedding-3-small
-openai==2.3.0
+# ============================================
+# CHATBOT PYME RAG - REQUIREMENTS
+# Python: 3.12.7
+# Verificado: Compatible y funcional
+# ============================================
 
-# FastAPI - Framework web
-fastapi==0.118.0
-uvicorn==0.37.0          # Servidor ASGI para FastAPI
-pydantic==2.11.10        # Validación de datos
+# ----------------
+# OPENAI
+# ----------------
+
+# OpenAI API - Chat completions y embeddings
+openai==1.60.1 #Ultima versión estable compatible con langchain-openai (requiere <2.0.0)
+
+# ----------------
+# LANGCHAIN ECOSYSTEM
+# ----------------
+
+# LangChain - Framework principal (instala langchain-core y langchain-community automáticamente)
+langchain==0.3.12 #Compatible con python 3.12.7
+
+# LangChain OpenAI - Integraciones específicas para OpenAI
+langchain-openai==0.2.14 
+
+# ----------------
+# VECTOR DATABASE
+# ----------------
 
 # ChromaDB - Base de datos vectorial local
-# Almacena embeddings y hace similarity search
-chromadb==1.2.1
+chromadb==1.3.5 #Version estable mas reciente y compatible con python 3.12.7
 
-# NumPy - Requerido por ChromaDB para operaciones vectoriales
-numpy==2.3.4
+# ----------------
+# FASTAPI y SERVIDOR
+# ----------------
 
-# Python-dotenv - Cargar variables de entorno desde .env
-python-dotenv==1.1.1
-requests==2.32.5
+# FastAPI - Framework web
+fastapi==0.123.0 #Ultima version estable y compatible con Pydantic 2.x
+
+# Uvicorn - Servidor ASGI
+uvicorn[standard]==0.32.1
+
+# ----------------
+# VALIDACIÓN DE DATOS
+# ----------------
+
+# Pydantic - Validación de datos
+pydantic==2.10.6 #Version estable y compatible con FastAPI
+
+# Pydantic Settings - Manejo de configuración
+pydantic-settings==2.7.1
+
+# ----------------
+# UTILIDADES
+# ----------------
+
+# NumPy - Operaciones vectoriales
+numpy>=1.26.0,<2.0.0 #1.26.x es la serie optimizada para Python 3.12.x
+
+# Python-dotenv - Variables de entorno
+python-dotenv==1.0.1
+
+# Requests - HTTP client
+requests==2.32.3 #Versiones posteriores cambian comportamiento interno con proxies y SSL

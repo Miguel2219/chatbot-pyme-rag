@@ -23,7 +23,7 @@ Chatbot conversacional que responde preguntas de clientes usando información ac
 ## Stack Tecnológico
 
 ### Backend & Core
-- **Python 3.11+**
+- **Python 3.12+**
 - **FastAPI** - API REST con documentación automática
 - **Pydantic** - Validación de datos
 
@@ -32,7 +32,7 @@ Chatbot conversacional que responde preguntas de clientes usando información ac
   - `gpt-4o-mini` - Generación de respuestas
   - `text-embedding-3-small` - Embeddings
 - **ChromaDB** - Base de datos vectorial
-- **LangChain** - Framework RAG (desde Semana 4)
+- **LangChain** - Framework RAG 
 
 ### Integraciones
 - **Twilio API** - WhatsApp Business (Semana 5)
@@ -54,7 +54,7 @@ Chatbot conversacional que responde preguntas de clientes usando información ac
 
 ### Prerequisitos
 
-- Python 3.11 o superior
+- Python 3.12.7
 - Cuenta OpenAI con API key
 - Git
 
@@ -75,7 +75,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Configurar variables de entorno
+### 4. Ejecutar Script para bases vectorial (Embeddings manualmente)
+```bash
+python scripts/create_embeddings.py 
+```
+
+### 5. Configurar variables de entorno
 
 Crear archivo `.env` en la raíz del proyecto:
 ```env

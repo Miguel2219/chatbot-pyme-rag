@@ -37,7 +37,7 @@ __pycache__/
 *.pyd
 .Python
 
-# Si usas venv, no debe subirse (ocupa cientos de MB)
+# los archivos venv no debe subirse (ocupa cientos de MB)
 venv/
 env/
 ENV/

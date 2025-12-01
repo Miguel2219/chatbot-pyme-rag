@@ -145,23 +145,3 @@ WhatsApp: 300-123-4567"""
             'time_total': time_total
         }
         return result
-
-if __name__ == "__main__":
-    
-    print("🧪 Probando RAGEngine...\n")
-    print("⚠️  NOTA: Necesitas tener documentos en ChromaDB para que funcione.")
-    print("   Si no has ejecutado el script de indexación, hazlo primero.\n")
-    
-    engine = RAGEngine()
-    
-    print("\n" + "=" * 60)
-    print("PRUEBA: Consulta al RAG Engine")
-    print("=" * 60)
-    
-    test_query = "¿Cuánto cuesta el ajiaco?"
-    
-    result = engine.query(test_query, verbose=True)
-    
-    print("\n✅ RAGEngine funciona correctamente!")
-    print("\n💡 Prueba con tus propias preguntas modificando test_query")
-    print(f"La respuesta es: '{result['answer']}'")
