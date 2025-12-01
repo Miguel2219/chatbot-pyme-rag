@@ -24,11 +24,12 @@ def index_documents(
     #Inicializar el VectorStorageManager
     try:
         vector_store = VectorStoreManager()
+        #Necesario cuando se modificaron archivos o se agregan nuevos archivos, mas no cuando se crea la BD desde 0
         if reset_db:
             vector_store.reset_database()
     except Exception as e:
         return None
-    #Verificiar si hay documentos
+    #Verificar si hay documentos
     stats_before = vector_store.get_collection_stats()
     docs_before = stats_before.get('total_documents', 0)
     print(f'\nDocumentos a indenixar {docs_before}')

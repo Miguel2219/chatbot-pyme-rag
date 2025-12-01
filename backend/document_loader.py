@@ -3,6 +3,7 @@ from typing import List, Dict
 from backend.config import KNOWLEDGE_BASE_PATH
 
 def load_single_document(file_path: str) -> str:
+    #Los archivos normalmente vienen en binario en el txt, este metodo es para convertirlos a texto normal y guardarlos localmente en variables de python
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"Archivo no encontrado: {file_path}")
     
@@ -11,6 +12,7 @@ def load_single_document(file_path: str) -> str:
             content = file.read()
         return content.strip()
     except UnicodeDecodeError:
+        #Excepcion para intertar con otra conversion para caracteres especiales
         print(f"Advertencia: {file_path} no está en UTF-8, intentando latin-1")
         with open(file_path, 'r', encoding='latin-1') as file:
             return file.read().strip()
@@ -23,6 +25,7 @@ def load_all_documents(directory_path: str = KNOWLEDGE_BASE_PATH) -> List[Dict[s
     
     for filename in os.listdir(directory_path):
         if filename.endswith('.txt'):
+            #Une la ruta con el directorio y el archivo.txt
             file_path = os.path.join(directory_path, filename)
             
             try:
@@ -63,7 +66,7 @@ def split_text_into_chunks(
     
     while start < len(text):
         end = start + chunk_size
-        chunk = text[start:end]
+        chunk = text[start:end] 
         chunk = chunk.strip()
         
         if chunk:

@@ -1,6 +1,6 @@
 # Chatbot PYME con RAG - WhatsApp Business
 
-Sistema de chatbot inteligente con **RAG (Retrieval Augmented Generation)** integrado con WhatsApp Business para PYMEs colombianas. Incluye panel de administración web, sistema de versionado de documentos, y desplegado en AWS.
+Sistema de chatbot inteligente con RAG (Retrieval Augmented Generation) integrado con WhatsApp Business para PYMEs. Incluye panel de administración web, sistema de versionado de documentos, y desplegado en AWS.
 ---
 
 ##  Descripción del Proyecto
