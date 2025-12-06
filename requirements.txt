@@ -15,12 +15,16 @@ openai==1.60.1 #Ultima versión estable compatible con langchain-openai (requier
 # LANGCHAIN ECOSYSTEM
 # ----------------
 
+# LangChain Community
+langchain-community==0.3.23
+
 # LangChain - Framework principal (instala langchain-core y langchain-community automáticamente)
-langchain==0.3.12 #Compatible con python 3.12.7
+langchain==0.3.24 #Compatible con python 3.12.7
 
 # LangChain OpenAI - Integraciones específicas para OpenAI
 langchain-openai==0.2.14 
-
+langchain-core==0.3.80
+langchain-text-splitters==0.3.8
 # ----------------
 # VECTOR DATABASE
 # ----------------
